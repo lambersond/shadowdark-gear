@@ -13,7 +13,12 @@ export const usePurchasesUpdate = () => {
         if (alreadyPurchased) {
           return [...purchasedGear].map(gear => {
             if (gear.name === newGear.name) {
-              return { ...gear, quantity: gear.quantity + 1, cost: gear.cost + newGear.cost }
+              return {
+                ...gear,
+                quantity: gear.quantity + 1,
+                cost: gear.cost + newGear.cost,
+                slots: gear.slots + newGear.slots,
+              } as PurchasedGear
             }
 
             return gear
@@ -41,7 +46,12 @@ export const usePurchasesUpdate = () => {
         if (itemToRemove?.quantity > 1) {
           return [...purchasedGear].map(gear => {
             if (gear.name === gearToRemove.name) {
-              return { ...gear, quantity: gear.quantity - 1, cost: gear.cost - gearToRemove.cost }
+              return {
+                ...gear,
+                quantity: gear.quantity - 1,
+                cost: gear.cost - gearToRemove.cost,
+                slots: gear.slots - gearToRemove.slots,
+              } as PurchasedGear
             }
 
             return gear
