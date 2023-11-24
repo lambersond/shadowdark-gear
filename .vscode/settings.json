@@ -1,0 +1,18 @@
+{
+    "eslint.codeActionsOnSave.rules": null,
+    "eslint.codeActionsOnSave.mode": "all",
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true
+    },
+    "eslint.options":
+    {
+        "overrideConfigFile": "./.eslintrc.json"
+    } 
+}
