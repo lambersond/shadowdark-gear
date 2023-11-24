@@ -8,10 +8,10 @@ function GearContainerRaw() {
   return (
     <GearProvider>
       <div className='flex flex-col gap-2 w-full max-w-3xl'>
-        <p className='text-white font-bold text-2xl pb-3'>Purchase Gear</p>
+        <p className='text-white font-bold text-2xl pb-3'>Buy Gear</p>
         <GearSearch />
         <GearFilters />
-        <GearTableContainer height='calc(100vh - 190px)' />
+        <GearTableContainer />
       </div>
     </GearProvider>
   )

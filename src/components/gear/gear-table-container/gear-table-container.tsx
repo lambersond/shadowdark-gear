@@ -1,14 +1,9 @@
 import { memo } from 'react'
 import { GearTable } from '../gear-table'
 
-type Props = Readonly<{ height: string }>
-
-export function GearTableContainerRaw({ height }: Props) {
+export function GearTableContainerRaw() {
   return (
-    <div
-      style={{ maxHeight: height }}
-      className='overflow-hidden overflow-y-scroll scroll-smooth overscroll-y-auto w-full max-w-3xl rounded-t-lg'
-    >
+    <div className='overflow-hidden overflow-y-scroll scroll-smooth overscroll-y-auto w-full max-w-3xl rounded-t-lg max-h-[calc(100vh_-_246px)] md:max-h-[calc(100vh_-_190px)]'>
       <GearTable />
     </div>
   )
