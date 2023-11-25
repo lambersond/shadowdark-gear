@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react'
+import { MouseEvent, memo, useCallback } from 'react'
 import { usePurchasesUpdate } from '@/hooks/use-purchases/use-purchases-update'
 import { getTotalCost } from '../helpers'
 import type { PurchasedGear } from '@/types'
@@ -9,7 +9,10 @@ function CartTableRaw({ tData }: Props) {
   const { removePurchasedGear } = usePurchasesUpdate()
 
   const handleRemoveGear = useCallback(
-    (item: PurchasedGear) => () => removePurchasedGear(item),
+    (item: PurchasedGear) => (event: MouseEvent<HTMLDivElement>) => {
+      event.stopPropagation()
+      removePurchasedGear(item)
+    },
     [removePurchasedGear],
   )
 

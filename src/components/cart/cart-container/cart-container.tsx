@@ -16,7 +16,7 @@ function CartContainerRaw() {
 
   return (
     <div className='w-full max-w-3xl'>
-      <p className='text-white font-bold text-2xl pb-3'>Purchased Gear</p>
+      <p className='text-white font-bold text-2xl pb-3 hidden md:block'>Purchased Gear</p>
       <p className='text-white text-lg pb-3'>
         {totalSlots} Slots, {getTotalCost(totalCost)}
       </p>

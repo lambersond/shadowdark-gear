@@ -12,7 +12,7 @@ function GearSearchRaw() {
     <input
       type='text'
       placeholder='Search...'
-      className='w-full max-w-lg p-1 text-slate-900 rounded shadow-sm focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50'
+      className='w-full max-w-3xl p-1 text-slate-900 rounded shadow-sm focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50'
       onChange={handleChange}
     />
   )
