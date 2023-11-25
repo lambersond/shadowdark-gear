@@ -13,7 +13,11 @@ function CartContainerRaw({ showInfo = false }: Props) {
   return (
     <div className='w-full max-w-3xl'>
       <p className='text-white font-bold text-2xl pb-3 hidden md:block'>Purchased Gear</p>
-      {showInfo && <CartInfo />}
+      {showInfo && (
+        <div className='pb-3'>
+          <CartInfo />
+        </div>
+      )}
       <div className='rounded-t-lg overflow-hidden'>
         <CartTable tData={items} />
       </div>

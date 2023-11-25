@@ -16,7 +16,7 @@ function CartInfoRaw() {
   )
 
   return (
-    <span className='flex justify-start items-center ml-auto gap-2 text-white font-bold text-lg pb-3'>
+    <span className='flex justify-start items-center ml-auto gap-2 text-white font-bold text-base'>
       <p className='flex'>{totalSlots}</p>
       <BackpackIcon className='block md:hidden' />
       <p className='hidden md:block'>Slots,</p>

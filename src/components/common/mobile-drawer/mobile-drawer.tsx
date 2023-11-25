@@ -20,15 +20,15 @@ function MobileDrawerRaw({ children, title, headerItems }: Props) {
     <div
       onClick={onClick}
       className={`${
-        isOpen ? 'h-full hover:h-full' : 'h-[69px] hover:h-[74px] rounded-t-lg'
+        isOpen ? 'h-full hover:h-full' : 'h-17 hover:h-18 rounded-t-lg'
       } ${drawerClassNames}`}
     >
       <div
-        className={`flex px-4 py-5 border-b bg-slate-950 ${
-          isOpen ? 'border-slate-700' : 'border-transparent'
+        className={`flex items-center px-4 h-17 border-b bg-slate-950 ${
+          isOpen ? 'border-slate-700' : 'border-transparent hover:h-18'
         }`}
       >
-        <h2 className='font-semibold text-lg'>{title}</h2>
+        <h2 className='font-semibold text-base'>{title}</h2>
         {headerItems}
       </div>
       {children}
