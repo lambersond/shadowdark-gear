@@ -272,3 +272,5 @@ export const baseWeapons: Gear[] = [
     type: 'weapon',
   },
 ]
+
+export const baseGear: Gear[] = [...baseBasics, ...baseArmors, ...baseWeapons]

@@ -1,4 +1,5 @@
 import { useCallback, useContext } from 'react'
+import { baseGear } from '@/constants'
 import { PurchasedCtxSetter } from './constants'
 import type { Gear, PurchasedGear } from '@/types'
 
@@ -37,20 +38,18 @@ export const usePurchasesUpdate = () => {
   )
 
   const removePurchasedGear = useCallback(
-    (gearToRemove: Gear) => {
+    (gearToRemove: PurchasedGear) => {
       setPurchasedGear(purchasedGear => {
-        const itemToRemove = purchasedGear.find(gear => gear.name === gearToRemove.name) || {
-          quantity: 0,
-        }
+        const itemToRemove = baseGear.find(gear => gear.name === gearToRemove.name) as Gear
 
-        if (itemToRemove?.quantity > 1) {
+        if (gearToRemove?.quantity > 1) {
           return [...purchasedGear].map(gear => {
-            if (gear.name === gearToRemove.name) {
+            if (gear.name === itemToRemove.name) {
               return {
                 ...gear,
                 quantity: gear.quantity - 1,
-                cost: gear.cost - gearToRemove.cost,
-                slots: gear.slots - gearToRemove.slots,
+                cost: gear.cost - itemToRemove.cost,
+                slots: gear.slots - itemToRemove.slots,
               } as PurchasedGear
             }
 
