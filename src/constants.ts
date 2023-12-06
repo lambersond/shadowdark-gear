@@ -162,7 +162,7 @@ export const baseArmors: Gear[] = [
   },
   {
     name: 'Mithral Chainmail',
-    cost: 50,
+    cost: 24000,
     slots: 1,
     type: 'armor',
   },
