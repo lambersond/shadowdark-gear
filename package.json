@@ -10,7 +10,7 @@
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
-    "next": "14.0.3",
+    "next": "15.5.10",
     "react": "^18",
     "react-dom": "^18"
   },
